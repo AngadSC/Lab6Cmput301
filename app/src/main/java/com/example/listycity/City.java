@@ -8,13 +8,12 @@ public class City implements Comparable {
     private String city;
     private String province;
 
-    // package-private ctor (no 'public'), as shown in the PDF
     City(String city, String province){
         this.city = city;
         this.province = province;
     }
 
-    // package-private getters, as shown in the PDF
+
     String getCityName(){
         return this.city;
     }
@@ -26,7 +25,7 @@ public class City implements Comparable {
     @Override
     public int compareTo(Object o) {
         City city = (City) o;
-        return this.city.compareTo(city.getCityName()); // this.city refers to the city name
+        return this.city.compareTo(city.getCityName());
     }
     @Override
     public boolean equals(Object object) {

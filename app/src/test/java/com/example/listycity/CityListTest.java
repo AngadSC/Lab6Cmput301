@@ -34,13 +34,12 @@ class CityListTest {
     @Test
     void testGetCities() {
         CityList cityList = mockCityList();
-        // This line checks if the first city in the cityList (retrieved by cityList.getCities().get(0))
-        // is the same as the city returned by mockCity()
+
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(0)));
-        // This pushes down the original city
+
         City city = new City("Charlottetown", "Prince Edward Island");
         cityList.add(city);
-        // Now the original city should be at position 1
+
         assertEquals(0, city.compareTo(cityList.getCities().get(0)));
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(1)));
     }
